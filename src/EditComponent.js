@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { Form, Text, TextArea } from "informed";
 import { connect } from "react-redux";
 
-class PostForm extends Component {
+
+class EditComponent extends Component {
   setFormApi = formApi => {
     this.formApi = formApi;
   };
 
   handleClick = e => {
     e.preventDefault();
-    const title = this.formApi.getState().values.title;
-    const message = this.formApi.getState().values.post;
+    const newTitle  = this.formApi.getState().values.title;
+    const newMessage = this.formApi.getState().values.post;
     const data = {
       id: new Date(),
       title,
@@ -28,12 +29,9 @@ class PostForm extends Component {
     this.formApi.getState().values.post = "";
     console.log(data);
     console.log(this.props);
-  };
-
   render() {
     return (
       <div>
-        <h1>Create Post</h1>
         <Form getApi={this.setFormApi}>
           <div>
             <Text
@@ -58,4 +56,4 @@ class PostForm extends Component {
     );
   }
 }
-export default connect()(PostForm);
+export default connect()(EditComponent);
