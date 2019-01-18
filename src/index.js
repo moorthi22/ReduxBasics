@@ -12,6 +12,9 @@ const store = createStore(PostReducer);
 function App() {
   return (
     <div className="App">
+      <div className="navbar">
+        <h2 className="center ">Post It</h2>
+      </div>
       <PostForm />
       <AllPost />
     </div>

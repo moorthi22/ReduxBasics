@@ -32,9 +32,9 @@ class PostForm extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Create Post</h1>
-        <Form getApi={this.setFormApi}>
+      <div className="post-container">
+        <h1 className="post_heading">Create Post</h1>
+        <Form className="form" getApi={this.setFormApi}>
           <div>
             <Text
               field="title"
