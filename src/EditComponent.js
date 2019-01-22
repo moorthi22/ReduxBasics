@@ -19,13 +19,13 @@ class EditComponent extends Component {
   };
   render() {
     return (
-      <div key={this.props.post.id} className="post">
+      <div className="post">
         <Form className="form" getApi={this.setFormApi}>
           <div>
             <Text
               field="title"
               id="name-field"
-              defaultValue={this.props.post.title}
+              value="10"
               placeholder="Enter Place Title"
             />
             <br />
